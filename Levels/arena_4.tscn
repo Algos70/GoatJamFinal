@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://djxwnx4tmcyed"]
+[gd_scene load_steps=12 format=3 uid="uid://djxwnx4tmcyed"]
 
 [ext_resource type="Texture2D" uid="uid://d3yv5eb6ivkjt" path="res://Assets/3. Arena.png" id="1_hpf6p"]
 [ext_resource type="Script" path="res://Levels/arena_4.gd" id="1_kdeyx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://eyoeo16wnl4p" path="res://Levels/Level_Objects/spikes_2.tscn" id="5_q60sv"]
 [ext_resource type="PackedScene" uid="uid://bp035upb44qsh" path="res://Characters/enemy1.tscn" id="6_dmqft"]
 [ext_resource type="PackedScene" uid="uid://fqe2qix8nibx" path="res://Levels/Level_Objects/platform_hell.tscn" id="7_lxwqc"]
+[ext_resource type="PackedScene" uid="uid://q646ickefhma" path="res://Characters/king.tscn" id="9_w1rku"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjahd"]
 texture = ExtResource("1_hpf6p")
@@ -9338,5 +9339,8 @@ scale = Vector2(0.503607, 0.37758)
 [node name="Spikes5" parent="." instance=ExtResource("5_q60sv")]
 position = Vector2(901, 612)
 scale = Vector2(0.503607, 0.37758)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("9_w1rku")]
+position = Vector2(3388, 383)
 
 [editable path="Portal"]

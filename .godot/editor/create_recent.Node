@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 RayCast2D
+=======
+AudioStreamPlayer2D
+>>>>>>> eeceb24 (final commit)
 Sprite2D
 Panel
 Sprite2D
@@ -20,7 +24,6 @@ CharacterBody2D
 AudioStreamPlayer
 Control
 CanvasLayer
-AudioStreamPlayer2D
 TileMap
 GPUParticles2D
 AnimationPlayer
