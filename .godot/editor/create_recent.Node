@@ -1,11 +1,9 @@
-<<<<<<< HEAD
+RayCast2D
 Sprite2D
-=======
 Panel
 Sprite2D
 Label
 Button
->>>>>>> d172e124e626bf48b7547867b52e6aa4aab37e14
 AnimatedSprite2D
 CollisionShape2D
 MyHurtBox

@@ -19,7 +19,7 @@ radius = 28.6588
 height = 90.4078
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5radb"]
-size = Vector2(80, 76)
+size = Vector2(98.7965, 90)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmuwa"]
 size = Vector2(89.2768, 76.75)
@@ -153,7 +153,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2(1.5, -6)
+position = Vector2(-1.66511, -13)
 shape = SubResource("RectangleShape2D_5radb")
 
 [node name="DisableTimer" parent="HurtBox" index="1"]
@@ -222,6 +222,10 @@ stream = ExtResource("12_fftlw")
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_qc1dh")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-3, -45)
+rotation = 1.59026
 
 [connection signal="freeMem" from="." to="HurtBox" method="_on_character_body_2d_free_mem"]
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]

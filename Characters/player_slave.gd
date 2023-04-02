@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED = 600.0
 const JUMP_VELOCITY = -600.0
-var hp = 5
+var hp = 15
 var leftPressed = false
 var rightPressed = true
 var is_attacking = false
@@ -58,14 +58,14 @@ func _physics_process(delta):
 		sprite.flip_h = true
 		isFacingLeft = true
 		if not leftPressed:
-			hitBox.position.x *= -1
+			#hitBox.position.x *= -1
 			rightPressed = false
 			leftPressed = true
 	if Input.is_action_just_pressed("right"):
 		sprite.flip_h = false
 		isFacingLeft = false
 		if not rightPressed:
-			hitBox.position.x *= -1
+			#hitBox.position.x *= -1
 			leftPressed = false
 			rightPressed = true
 

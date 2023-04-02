@@ -1,4 +1,5 @@
-res://Characters/enemy1.tscn
-res://Characters/king.tscn
 res://Characters/player_slave.tscn
-res://Levels/boss_deneme.tscn
+res://Characters/enemy1.tscn
+res://Characters/enemy1.gd
+res://Characters/player_slave.gd
+res://Characters/king.gd

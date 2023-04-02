@@ -17,6 +17,11 @@ var isOnEdge = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var rng = RandomNumberGenerator.new()
 var dieSoundPlayed = false
+var ray_length = 100
+@onready var ray_cast = $RayCast2D
+var speed = 50
+
+
 signal freeMem
 
 
@@ -34,6 +39,10 @@ func _ready():
 	hpBar.value = hp
 
 func _process(delta):
+	var collision = ray_cast.get_collider()
+	if collision != null: # if there is a collision
+		isFacingLeft = not isFacingLeft
+		velocity.x *= 1
 	if defenceCooldown > 0:
 		defenceCooldown -= delta
 	else:

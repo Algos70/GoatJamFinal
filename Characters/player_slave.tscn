@@ -20,7 +20,7 @@ height = 80.0
 size = Vector2(19, 57.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bs1e7"]
-size = Vector2(88, 67.5)
+size = Vector2(150, 67.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n2mqr"]
 atlas = ExtResource("5_qm8wn")
@@ -195,7 +195,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(-28, -12.75)
+position = Vector2(-59, -12.75)
 shape = SubResource("RectangleShape2D_bs1e7")
 
 [node name="DisableHitBoxTimer" parent="HitBox" index="1"]

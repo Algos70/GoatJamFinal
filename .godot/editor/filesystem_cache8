@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1680458297
+::res://::1680459462
 Hit.res::Animation::1325988295404036736::1680438817::0::1::::<><>::
 HurtBox.gd::GDScript::-1::1680458148::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::6418745344737241572::1680438283::1680438309::1::::<><>::
@@ -78,17 +78,17 @@ Kral Normal.png::CompressedTexture2D::3960604625917533042::1680443341::168044437
 Kral Saldırı.png::CompressedTexture2D::7401104351752254046::1680443343::1680444376::1::::<><>::
 Kral Savunma.png::CompressedTexture2D::3533151466429998418::1680443344::1680444376::1::::<><>::
 Kral Speccial Attack.png::CompressedTexture2D::7246568165570135839::1680450593::1680452734::1::::<><>::
-::res://Characters/::1680458205
-enemy1.gd::GDScript::-1::1680448327::0::1::::<>CharacterBody2D<>::
-enemy1.tscn::PackedScene::3492617505454106307::1680458205::0::1::::<><>::res://Characters/enemy1.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://b5qfni5xo3o8o<>uid://doday1mp6sida<>uid://dge5r4x8gof7b<>uid://dl1gy24spk5x2<>uid://tw16ap62u3p6<>uid://cupuo31rpfsnp<>uid://s5k3lryxyctc<>uid://b6fskwdvwwgm4<>uid://b8gylqo8mt0s6<>uid://byiy2ej7dn7gb
+::res://Characters/::1680459375
+enemy1.gd::GDScript::-1::1680459128::0::1::::<>CharacterBody2D<>::
+enemy1.tscn::PackedScene::3492617505454106307::1680459375::0::1::::<><>::res://Characters/enemy1.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://b5qfni5xo3o8o<>uid://doday1mp6sida<>uid://dge5r4x8gof7b<>uid://dl1gy24spk5x2<>uid://tw16ap62u3p6<>uid://cupuo31rpfsnp<>uid://s5k3lryxyctc<>uid://b6fskwdvwwgm4<>uid://b8gylqo8mt0s6<>uid://byiy2ej7dn7gb
 enemy3.gd::GDScript::-1::1680438283::0::1::::<>CharacterBody2D<>::
 enemy3.tscn::PackedScene::8310075081512770545::1680438283::0::1::::<><>::res://enemy.gd<>uid://duqxe3qr0dn7p<>uid://b52s8cbffyyln<>uid://b5qfni5xo3o8o
 HurtBox.gd::GDScript::-1::1680438283::0::1::::<>Area2D<>::
 king.gd::GDScript::-1::1680458195::0::1::::<>CharacterBody2D<>::
-king.tscn::PackedScene::1188833784721965020::1680458205::0::1::::<><>::uid://bp035upb44qsh<>res://Characters/king.gd<>uid://ddpfdwdvad2sw<>uid://dbij6ikoctj5h<>uid://bqlqquwejnago<>uid://bwostx7eshyby<>uid://byro1jecly4fy
+king.tscn::PackedScene::1188833784721965020::1680458307::0::1::::<><>::uid://bp035upb44qsh<>res://Characters/king.gd<>uid://ddpfdwdvad2sw<>uid://dbij6ikoctj5h<>uid://bqlqquwejnago<>uid://bwostx7eshyby<>uid://byro1jecly4fy
 player_slave.gd::GDScript::-1::1680457124::0::1::::<>CharacterBody2D<>::
-player_slave.tscn::PackedScene::2682491043363114084::1680458205::0::1::::<><>::res://Characters/player_slave.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://ctvy52qwimep0<>uid://bv0o0iixdu8ar<>uid://uk6rxsvl5nh2<>uid://b6fskwdvwwgm4<>uid://cupuo31rpfsnp<>uid://dmvcu43hw8m8j<>uid://cci5kvwogwbus<>uid://byumwpp717xkd
-::res://Levels/::1680458256
+player_slave.tscn::PackedScene::2682491043363114084::1680458701::0::1::::<><>::res://Characters/player_slave.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://ctvy52qwimep0<>uid://bv0o0iixdu8ar<>uid://uk6rxsvl5nh2<>uid://b6fskwdvwwgm4<>uid://cupuo31rpfsnp<>uid://dmvcu43hw8m8j<>uid://cci5kvwogwbus<>uid://byumwpp717xkd
+::res://Levels/::1680458563
 act_1.gd::GDScript::-1::1680449180::0::1::::<>Control<>::
 act_1.tscn::PackedScene::6641123238575943510::1680454055::0::1::::<><>::uid://bekerluxgpqvt<>res://Levels/act_1.gd<>uid://bky0mpdfsladh<>uid://chop75h6ww8qq<>uid://bmao8uvp34rgs
 act_2.gd::GDScript::-1::1680458256::0::1::::<>Control<>::
@@ -101,7 +101,7 @@ arena_3.gd::GDScript::-1::1680442896::0::1::::<>Node2D<>::
 arena_3.tscn::PackedScene::1864296654609017315::1680458256::0::1::::<><>::res://Levels/arena_3.gd<>uid://bkirkg2mw0vjj<>uid://behoiak0efutg<>uid://nrk846c0foij<>res://Levels/Level_Objects/portal2.gd<>uid://eyoeo16wnl4p<>uid://bp035upb44qsh<>uid://7wps8pd52j8c
 arena_4.gd::GDScript::-1::1680442896::0::1::::<>Node2D<>::
 arena_4.tscn::PackedScene::7839802575042392283::1680458256::0::1::::<><>::uid://d3yv5eb6ivkjt<>res://Levels/arena_4.gd<>uid://nrk846c0foij<>uid://behoiak0efutg<>res://Levels/Level_Objects/portal3.gd<>uid://eyoeo16wnl4p<>uid://bp035upb44qsh<>uid://fqe2qix8nibx
-boss_deneme.tscn::PackedScene::2295240339860435876::1680458221::0::1::::<><>::uid://q646ickefhma<>uid://46tt8ppv2c0m<>uid://behoiak0efutg
+boss_deneme.tscn::PackedScene::2295240339860435876::1680458563::0::1::::<><>::uid://q646ickefhma<>uid://46tt8ppv2c0m<>uid://behoiak0efutg
 game_level.gd::GDScript::-1::1680438283::0::1::::<>Node2D<>::
 game_level.tscn::PackedScene::9112275430691491352::1680454159::0::1::::<><>::uid://behoiak0efutg<>res://Levels/game_level.gd<>uid://doxf34jut7axf<>uid://xsjoi3nshqle<>uid://bp035upb44qsh<>uid://eyoeo16wnl4p
 welcome_screen.tscn::PackedScene::1739746805008201242::1680448784::0::1::::<><>::res://WelcomeScreen.gd

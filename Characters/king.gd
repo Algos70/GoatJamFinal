@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var hp = 10
+@export var hp = 20
 const IDLE_SPEED = 50
 const CHASE_SPEED = 100
 
