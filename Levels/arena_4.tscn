@@ -9272,13 +9272,13 @@ scale = Vector2(6.33112, 6.59453)
 script = ExtResource("4_cvunm")
 
 [node name="PlayerSlave" parent="." instance=ExtResource("3_ibmkt")]
-position = Vector2(978, 394)
+position = Vector2(108, 430)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerSlave"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(978, 394)
+position = Vector2(108, 430)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
@@ -9301,7 +9301,7 @@ position = Vector2(1001, 475)
 scale = Vector2(0.496539, 0.46875)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("6_dmqft")]
-position = Vector2(710, 501)
+position = Vector2(708, 388)
 
 [node name="PlatformHell3" parent="." instance=ExtResource("7_lxwqc")]
 position = Vector2(967, 299)
@@ -9311,56 +9311,32 @@ scale = Vector2(0.496539, 0.46875)
 position = Vector2(675, 213)
 scale = Vector2(0.496539, 0.46875)
 
-[node name="PlatformHell6" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(339, 35)
-scale = Vector2(0.496539, 0.46875)
-
-[node name="PlatformHell6" parent="PlatformHell6" instance=ExtResource("7_lxwqc")]
-position = Vector2(588.071, 108.8)
-scale = Vector2(0.496539, 0.46875)
-
-[node name="PlatformHell7" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(966, -41)
-rotation = 2.61799
-scale = Vector2(0.496539, 0.46875)
-
-[node name="PlatformHell8" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(1192, -45)
-scale = Vector2(0.496539, 0.46875)
-
-[node name="PlatformHell9" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(1413, -217)
-scale = Vector2(0.496539, 0.46875)
-
-[node name="PlatformHell10" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(1641, -45)
-scale = Vector2(0.496539, 0.46875)
-
 [node name="CharacterBody2D3" parent="." instance=ExtResource("6_dmqft")]
-position = Vector2(1866, 390)
+position = Vector2(1119, 92)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("6_dmqft")]
-position = Vector2(2131, 571)
+position = Vector2(1348, 245)
 
 [node name="CharacterBody2D5" parent="." instance=ExtResource("6_dmqft")]
-position = Vector2(1572, 563)
+position = Vector2(1584, 391)
 
 [node name="CharacterBody2D6" parent="." instance=ExtResource("6_dmqft")]
-position = Vector2(2355, 450)
+position = Vector2(2252, 369)
 
-[node name="PlatformHell11" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(1361, 229)
-rotation = 1.0472
+[node name="PlatformHell5" parent="." instance=ExtResource("7_lxwqc")]
+position = Vector2(1081, 180)
 scale = Vector2(0.496539, 0.46875)
 
-[node name="PlatformHell11" parent="PlatformHell11" instance=ExtResource("7_lxwqc")]
-position = Vector2(1361, 229)
-rotation = 1.0472
-scale = Vector2(0.496539, 0.46875)
+[node name="Spikes3" parent="." instance=ExtResource("5_q60sv")]
+position = Vector2(605, 152)
+scale = Vector2(0.503607, 0.37758)
 
-[node name="PlatformHell12" parent="." instance=ExtResource("7_lxwqc")]
-position = Vector2(1394, 57)
-rotation = -0.785397
-scale = Vector2(0.496539, 0.46875)
+[node name="Spikes4" parent="." instance=ExtResource("5_q60sv")]
+position = Vector2(1291, 586)
+scale = Vector2(0.503607, 0.37758)
+
+[node name="Spikes5" parent="." instance=ExtResource("5_q60sv")]
+position = Vector2(901, 612)
+scale = Vector2(0.503607, 0.37758)
 
 [editable path="Portal"]
