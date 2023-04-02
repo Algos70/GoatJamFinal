@@ -13896,7 +13896,7 @@ position = Vector2(1467, 303)
 scale = Vector2(0.433973, 0.469662)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("7_8brly")]
-position = Vector2(869, 744)
+position = Vector2(1013, 744)
 
 [node name="Spikes3" parent="." instance=ExtResource("8_1kif3")]
 position = Vector2(1667, 722)

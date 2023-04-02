@@ -9326,7 +9326,10 @@ position = Vector2(1348, 245)
 position = Vector2(1584, 391)
 
 [node name="CharacterBody2D6" parent="." instance=ExtResource("6_dmqft")]
-position = Vector2(2252, 369)
+position = Vector2(2163, 263)
+
+[node name="CharacterBody2D6" parent="CharacterBody2D6" instance=ExtResource("6_dmqft")]
+position = Vector2(-339, -15)
 
 [node name="PlatformHell5" parent="." instance=ExtResource("7_lxwqc")]
 position = Vector2(1081, 180)
