@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 res://Characters/enemy1.tscn
+=======
+>>>>>>> refs/remotes/origin/main
 res://Characters/player_slave.tscn
-res://Characters/player_slave.gd
+res://Characters/enemy1.tscn
+res://UI/game_over_page.tscn
+res://Levels/arena_3.tscn
+res://Levels/game_level.tscn
+res://Levels/arena_3.gd
+res://Levels/arena_2.tscn
+res://Levels/arena_4.tscn
+res://Levels/arena_4.gd
