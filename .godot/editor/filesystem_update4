@@ -1,24 +1,4 @@
-res://Levels/act_2.tscn
-res://Levels/act_1.tscn
-res://Levels/act_3.tscn
-res://Levels/act_2.gd
-res://UI/next_level_page.tscn
-res://UI/next_level.gd
-res://UI/next_level_page 2.tscn
-res://UI/next_level_page 2.gd
-res://Levels/arena_2.tscn
-res://Levels/act_3.gd
-res://Win.gd
-res://Levels/win.tscn
-res://UI/game_over_page.tscn
-<<<<<<< HEAD
-res://Utility/magic_ball.tscn
-res://Utility/hit_box.gd
-res://HurtBox.gd
-res://Characters/player_slave.gd
-=======
-res://Levels/arena_4.gd
-res://Levels/arena_4.tscn
-res://Levels/Level_Objects/portal3.gd
-res://Levels/arena_3.tscn
->>>>>>> d172e124e626bf48b7547867b52e6aa4aab37e14
+res://Characters/enemy1.tscn
+res://Characters/king.tscn
+res://Characters/player_slave.tscn
+res://Levels/boss_deneme.tscn
