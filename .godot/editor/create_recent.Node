@@ -1,3 +1,9 @@
+AnimatedSprite2D
+Timer
+CollisionShape2D
+my_hitBox
+MyHurtBox
+CharacterBody2D
 Control
 CanvasLayer
 AudioStreamPlayer2D

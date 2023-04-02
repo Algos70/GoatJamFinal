@@ -1,16 +1,5 @@
 res://Characters/player_slave.tscn
 res://Characters/player_slave.gd
 res://Characters/enemy1.tscn
-<<<<<<< HEAD
-=======
-res://UI/game_over_page.tscn
-res://Levels/arena_3.tscn
-res://Levels/game_level.tscn
-res://Levels/arena_3.gd
-res://Levels/arena_2.tscn
-res://Levels/arena_4.tscn
-res://Levels/arena_4.gd
-res://UI/welcome_page.tscn
-res://UI/welcome_page.gd
-res://Levels/welcome_screen.tscn
->>>>>>> 52352aa3d4fafde0361e5e31bd60933a61ae25c8
+res://Characters/enemy1.gd
+res://king.tscn

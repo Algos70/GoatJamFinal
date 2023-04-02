@@ -96,6 +96,7 @@ func _on_hurt_box_hurt(damage):
 			hpBar.value -= damage
 			hp -= damage
 		if hp <= 0:
+			canInteract = false
 			if (not dieSoundPlayed):
 				dieSound.play(0)
 				dieSoundPlayed = true
