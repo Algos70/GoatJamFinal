@@ -9,7 +9,7 @@ extends Control
 
 func _on_next_pressed():
 	pressed.play()
-	get_tree().change_scene_to_file("res://Levels/arena_4.tscn")
+	get_tree().change_scene_to_file("res://Levels/act_3.tscn")
 
 
 func _on_quit_2_pressed():

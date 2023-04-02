@@ -20,4 +20,4 @@ func _on_quit_2_mouse_entered():
 
 func _on_next_pressed():
 	pressed.play()
-	get_tree().change_scene_to_file("res://Levels/arena_3.tscn")
+	get_tree().change_scene_to_file("res://Levels/act_2.tscn")

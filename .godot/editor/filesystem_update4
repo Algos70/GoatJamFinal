@@ -1,13 +1,17 @@
-res://Levels/welcome_screen.tscn
-res://Characters/king.tscn
-res://Levels/act_1.gd
-res://src/HitBox.gd
-res://King.gd
-res://Utility/hit_box.tscn
-res://Characters/king.gd
-res://Characters/enemy1.tscn
-res://Levels/BossDeneme.tscn
-res://Levels/boss_deneme.tscn
-res://Levels/game_level.tscn
-res://Characters/player_slave.tscn
+res://Levels/act_2.tscn
+res://Levels/act_1.tscn
+res://Levels/act_3.tscn
+res://Levels/act_2.gd
+res://UI/next_level_page.tscn
+res://UI/next_level.gd
+res://UI/next_level_page 2.tscn
+res://UI/next_level_page 2.gd
+res://Levels/arena_2.tscn
+res://Levels/act_3.gd
+res://Win.gd
+res://Levels/win.tscn
 res://UI/game_over_page.tscn
+res://Levels/arena_4.gd
+res://Levels/arena_4.tscn
+res://Levels/Level_Objects/portal3.gd
+res://Levels/arena_3.tscn

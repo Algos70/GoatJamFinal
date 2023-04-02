@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://hx83yvx787al"]
+
+[ext_resource type="Script" path="res://Win.gd" id="1_uybl7"]
+[ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="2_arla1"]
+[ext_resource type="AudioStream" uid="uid://chop75h6ww8qq" path="res://Sound/Effects/Click.wav" id="3_66f2t"]
+[ext_resource type="AudioStream" uid="uid://bmao8uvp34rgs" path="res://Sound/Effects/pressed.mp3" id="4_rru4u"]
+[ext_resource type="Texture2D" uid="uid://tlklufr8htwg" path="res://Assets/Win.png" id="5_rr2yw"]
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uybl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959, 540.5)
+scale = Vector2(1.87891, 1.05566)
+texture = ExtResource("5_rr2yw")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 37.0
+offset_right = 1279.0
+offset_bottom = 193.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 54.0
+offset_right = 1202.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("2_arla1")
+theme_override_font_sizes/font_size = 70
+text = "You won!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 229.0
+offset_right = 1897.0
+offset_bottom = 415.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 256.0
+offset_right = 1848.0
+offset_bottom = 392.0
+theme_override_font_sizes/font_size = 50
+text = "Tebrikler!! Yikiel'in görevlisini malup edip areadan kaçmayı başardın!!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart2" type="Button" parent="."]
+offset_left = 701.0
+offset_top = 490.0
+offset_right = 1203.0
+offset_bottom = 626.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_arla1")
+theme_override_font_sizes/font_size = 40
+text = "MAIN MENU"
+
+[node name="Click" type="AudioStreamPlayer" parent="Restart2"]
+stream = ExtResource("3_66f2t")
+volume_db = 1.0
+
+[node name="Pressed" type="AudioStreamPlayer" parent="Restart2"]
+stream = ExtResource("4_rru4u")
+
+[connection signal="mouse_entered" from="Restart2" to="." method="_on_restart_2_mouse_entered"]
+[connection signal="pressed" from="Restart2" to="." method="_on_restart_2_pressed"]

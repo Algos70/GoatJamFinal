@@ -8466,13 +8466,13 @@ scale = Vector2(6.33112, 6.59453)
 script = ExtResource("5_kw56a")
 
 [node name="PlayerSlave" parent="." instance=ExtResource("2_qduge")]
-position = Vector2(3299, -312)
+position = Vector2(150, 340)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerSlave"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3299, -312)
+position = Vector2(150, 340)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
