@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 res://Characters
 res://
 <<<<<<< HEAD
 res://Sound/Effects/HitAndDieEffects
 =======
+=======
+res://Levels/Level_Objects
+>>>>>>> 06d05e2 (Scene tree updated)
 res://Levels
->>>>>>> f761714c59891cf111608ffe34938556f97be7d6
 res://Assets

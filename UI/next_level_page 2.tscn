@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cd1p307fsmex8"]
+[gd_scene load_steps=8 format=3 uid="uid://blkghs7rsivmn"]
 
-[ext_resource type="Script" path="res://UI/next_level.gd" id="1_a0ve5"]
+[ext_resource type="Script" path="res://UI/next_level_page 2.gd" id="1_gikdl"]
 [ext_resource type="Texture2D" uid="uid://ewt54tyt641u" path="res://Assets/fist.png" id="2_r3wso"]
 [ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="3_1njj7"]
 [ext_resource type="Script" path="res://UI/Play.gd" id="4_4shrs"]
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_a0ve5")
+script = ExtResource("1_gikdl")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

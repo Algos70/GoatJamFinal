@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 AnimatedSprite2D
 Timer
 CollisionShape2D
 my_hitBox
 MyHurtBox
 CharacterBody2D
+=======
+CollisionShape2D
+StaticBody2D
+Sprite2D
+AudioStreamPlayer
+Button
+Label
+Panel
+>>>>>>> 06d05e2 (Scene tree updated)
 Control
 CanvasLayer
 AudioStreamPlayer2D
 TileMap
-AudioStreamPlayer
 GPUParticles2D
 AnimationPlayer

@@ -1,1 +1,31 @@
+<<<<<<< HEAD
 res://Levels/welcome_screen.tscn
+=======
+res://Characters/player_slave.tscn
+res://Characters/player_slave.gd
+res://Characters/enemy1.tscn
+<<<<<<< HEAD
+res://Characters/enemy1.gd
+res://king.tscn
+=======
+res://UI/game_over_page.tscn
+res://Levels/arena_3.tscn
+res://Levels/game_level.tscn
+res://Levels/arena_3.gd
+res://Levels/arena_2.tscn
+res://Levels/arena_4.tscn
+res://Levels/arena_4.gd
+res://UI/welcome_page.tscn
+res://UI/welcome_page.gd
+res://Levels/welcome_screen.tscn
+res://Levels/act_1.tscn
+res://UI/game_over_screen.tscn
+res://Levels/act_1.gd
+res://Levels/Level_Objects/portal.gd
+res://Levels/Level_Objects/portal2.gd
+res://UI/next_level.gd
+res://UI/next_level_page.tscn
+res://UI/next_level_page 2.tscn
+res://UI/next_level_page 2.gd
+>>>>>>> 06d05e2 (Scene tree updated)
+>>>>>>> 3324dc5712679573c9fdbd8ae1743448975d63d7
