@@ -11,3 +11,6 @@ res://Levels/arena_3.gd
 res://Levels/arena_2.tscn
 res://Levels/arena_4.tscn
 res://Levels/arena_4.gd
+res://UI/welcome_page.tscn
+res://UI/welcome_page.gd
+res://Levels/welcome_screen.tscn
