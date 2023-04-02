@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnwe8jdx3hbw4"]
+
+[ext_resource type="PackedScene" uid="uid://bp035upb44qsh" path="res://Characters/enemy1.tscn" id="1_qxsfs"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_qxsfs")]
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
+[editable path="HealthBar"]

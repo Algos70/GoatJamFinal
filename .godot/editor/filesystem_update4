@@ -1,5 +1,1 @@
-res://Characters/player_slave.tscn
-res://Characters/player_slave.gd
-res://Characters/enemy1.tscn
-res://Characters/enemy1.gd
-res://king.tscn
+res://Levels/welcome_screen.tscn
