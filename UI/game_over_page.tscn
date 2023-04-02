@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0d7wjw6wah3n"]
+[gd_scene load_steps=9 format=3 uid="uid://c0d7wjw6wah3n"]
 
 [ext_resource type="Script" path="res://UI/game_over_page.gd" id="1_nt6ex"]
 [ext_resource type="Texture2D" uid="uid://uo601twmrluo" path="res://Assets/BackGround.png" id="2_07uum"]
+[ext_resource type="AudioStream" uid="uid://b7rv6pu0782bm" path="res://Sound/Effects/fail-trombone-01.mp3" id="2_34yxo"]
 [ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="2_d536m"]
 [ext_resource type="Script" path="res://UI/Play.gd" id="3_8wytu"]
 [ext_resource type="Script" path="res://UI/Quit.gd" id="4_mtrdm"]
@@ -16,6 +17,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nt6ex")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_34yxo")
+autoplay = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
