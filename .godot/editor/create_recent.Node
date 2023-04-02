@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+Control
+CanvasLayer
 AudioStreamPlayer2D
-=======
-=======
 TileMap
->>>>>>> 12c0ff7 (Arena 3 finished)
 AudioStreamPlayer
->>>>>>> f761714c59891cf111608ffe34938556f97be7d6
 GPUParticles2D
 AnimationPlayer
