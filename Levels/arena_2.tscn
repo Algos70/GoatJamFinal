@@ -13835,6 +13835,7 @@ script = ExtResource("1_w5dp4")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_fb2mx")
 autoplay = true
+max_distance = 2e+07
 
 [node name="Start" type="TileMap" parent="."]
 position = Vector2(-2, 319)
