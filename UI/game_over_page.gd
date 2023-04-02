@@ -11,7 +11,7 @@ func _ready():
 
 func _on_restart_pressed():
 	pressed_sound.play()
-	get_tree().change_scene_to_file("res://Levels/game_level.tscn")
+	get_tree().change_scene_to_file("res://Levels/arena_2.tscn")
 
 
 func _on_quit_2_pressed():

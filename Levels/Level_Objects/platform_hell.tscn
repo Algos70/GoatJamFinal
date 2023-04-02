@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://fqe2qix8nibx"]
+
+[ext_resource type="Texture2D" uid="uid://u2idp23if2fs" path="res://Assets/3. Platform.png" id="1_mabel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te631"]
+size = Vector2(476, 48.5)
+
+[node name="PlatformHell" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, -102)
+texture = ExtResource("1_mabel")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(28, 75.25)
+shape = SubResource("RectangleShape2D_te631")

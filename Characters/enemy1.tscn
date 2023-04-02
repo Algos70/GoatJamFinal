@@ -175,7 +175,7 @@ one_shot = false
 autostart = true
 
 [node name="detectionRange" parent="." instance=ExtResource("6_075mc")]
-position = Vector2(0, -1)
+position = Vector2(-2, -3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7.62939e-06, -0.999992)
