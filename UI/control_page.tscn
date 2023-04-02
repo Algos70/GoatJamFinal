@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfqet0ndy0cca"]
+
+[ext_resource type="Script" path="res://UI/control_page.gd" id="1_ax41r"]
+[ext_resource type="Texture2D" uid="uid://be1y0r3jxvmbn" path="res://Assets/parchment .png" id="1_ryi11"]
+[ext_resource type="AudioStream" uid="uid://gqqr2ktobers" path="res://Sound/Music/FonMusic.wav" id="2_ls78d"]
+[ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="3_hu86l"]
+[ext_resource type="AudioStream" uid="uid://chop75h6ww8qq" path="res://Sound/Effects/Click.wav" id="4_cfyjl"]
+[ext_resource type="AudioStream" uid="uid://bmao8uvp34rgs" path="res://Sound/Effects/pressed.mp3" id="5_bqx1k"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ax41r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ls78d")
+volume_db = 4.95
+autoplay = true
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.875, 1.05469)
+texture = ExtResource("1_ryi11")
+
+[node name="Attack" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 463.0
+offset_right = 1481.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "Attack"
+
+[node name="Jump" type="Label" parent="."]
+offset_left = 498.0
+offset_top = 291.0
+offset_right = 637.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "Jump"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 766.0
+offset_top = 506.0
+offset_right = 1089.0
+offset_bottom = 564.0
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "Move right"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 498.0
+offset_right = 369.0
+offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "Move left"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 1493.0
+offset_top = 788.0
+offset_right = 1770.0
+offset_bottom = 892.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "  Back  "
+
+[node name="Click" type="AudioStreamPlayer" parent="Back"]
+stream = ExtResource("4_cfyjl")
+
+[node name="Pressed" type="AudioStreamPlayer" parent="Back"]
+stream = ExtResource("5_bqx1k")
+volume_db = -10.0
+
+[node name="Mouse2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1012.0
+offset_top = 319.0
+offset_right = 1726.0
+offset_bottom = 433.0
+
+[node name="Mouse" type="Label" parent="Mouse2"]
+offset_left = 81.0
+offset_top = 36.0
+offset_right = 658.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "MOUSE LEFT CLICK"
+
+[node name="Left" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 475.0
+offset_right = 512.0
+offset_bottom = 580.0
+
+[node name="A" type="Label" parent="Left"]
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 78.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "A"
+
+[node name="Right" type="Panel" parent="."]
+offset_left = 626.0
+offset_top = 476.0
+offset_right = 739.0
+offset_bottom = 581.0
+
+[node name="D" type="Label" parent="Right"]
+offset_left = 43.0
+offset_top = 32.0
+offset_right = 84.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "D"
+
+[node name="Jump2" type="Panel" parent="."]
+offset_left = 512.0
+offset_top = 350.0
+offset_right = 625.0
+offset_bottom = 455.0
+
+[node name="W" type="Label" parent="Jump2"]
+offset_left = 41.0
+offset_top = 32.0
+offset_right = 83.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_fonts/font = ExtResource("3_hu86l")
+theme_override_font_sizes/font_size = 40
+text = "w"
+
+[connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

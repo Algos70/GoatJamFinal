@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqnpytgf26bt6"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_k2rq8"]
+[ext_resource type="Texture2D" uid="uid://duqxe3qr0dn7p" path="res://Assets/Knight/noBKG_KnightIdle_strip.png" id="1_lfggg"]
+[ext_resource type="PackedScene" uid="uid://b52s8cbffyyln" path="res://detectionRange.tscn" id="2_01qpa"]
+[ext_resource type="PackedScene" uid="uid://b5qfni5xo3o8o" path="res://attack_range.tscn" id="4_77e61"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3spa"]
+size = Vector2(25.5, 32)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_k2rq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_lfggg")
+region_enabled = true
+region_rect = Rect2(19, 10, 31, 37)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.25, 0)
+shape = SubResource("RectangleShape2D_q3spa")
+
+[node name="Area2D-Detection_Range" parent="." instance=ExtResource("2_01qpa")]
+position = Vector2(0, 1)
+
+[node name="Area2D-Attack_Range" parent="." instance=ExtResource("4_77e61")]
+position = Vector2(1, 0)
+
+[connection signal="body_entered" from="Area2D-Detection_Range" to="." method="_on_area_2d_detection_range_body_entered"]
+[connection signal="body_exited" from="Area2D-Detection_Range" to="." method="_on_area_2d_detection_range_body_exited"]
+[connection signal="body_entered" from="Area2D-Attack_Range" to="." method="_on_area_2d_attack_range_body_entered"]
+[connection signal="body_exited" from="Area2D-Attack_Range" to="." method="_on_area_2d_attack_range_body_exited"]

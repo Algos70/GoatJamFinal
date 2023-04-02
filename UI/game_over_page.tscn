@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0d7wjw6wah3n"]
+
+[ext_resource type="Script" path="res://UI/game_over_page.gd" id="1_nt6ex"]
+[ext_resource type="Texture2D" uid="uid://uo601twmrluo" path="res://Assets/BackGround.png" id="2_07uum"]
+[ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="2_d536m"]
+[ext_resource type="Script" path="res://UI/Play.gd" id="3_8wytu"]
+[ext_resource type="Script" path="res://UI/Quit.gd" id="4_mtrdm"]
+[ext_resource type="AudioStream" uid="uid://chop75h6ww8qq" path="res://Sound/Effects/Click.wav" id="5_nbinf"]
+[ext_resource type="AudioStream" uid="uid://bmao8uvp34rgs" path="res://Sound/Effects/pressed.mp3" id="6_cvo28"]
+
+[node name="GameOverPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nt6ex")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArenaResim" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(960, 539.5)
+scale = Vector2(1.875, 1.05371)
+texture = ExtResource("2_07uum")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 116.0
+offset_right = 1488.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(0.490196, 0.509804, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d536m")
+theme_override_font_sizes/font_size = 70
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 363.0
+offset_right = 1206.0
+offset_bottom = 499.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d536m")
+theme_override_font_sizes/font_size = 40
+text = "RESTART"
+script = ExtResource("3_8wytu")
+
+[node name="Click" type="AudioStreamPlayer" parent="Restart"]
+stream = ExtResource("5_nbinf")
+volume_db = 1.0
+
+[node name="Pressed" type="AudioStreamPlayer" parent="Restart"]
+stream = ExtResource("6_cvo28")
+
+[node name="Quit2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 547.0
+offset_right = 1208.0
+offset_bottom = 683.0
+theme_override_colors/font_color = Color(0.941176, 0.913725, 0.74902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d536m")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+script = ExtResource("4_mtrdm")
+
+[node name="Click" type="AudioStreamPlayer" parent="Quit2"]
+stream = ExtResource("5_nbinf")
+volume_db = 1.0
+
+[node name="Pressed" type="AudioStreamPlayer" parent="Quit2"]
+stream = ExtResource("6_cvo28")
+
+[connection signal="mouse_entered" from="Restart" to="." method="_on_restart_mouse_entered"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="mouse_entered" from="Quit2" to="." method="_on_quit_2_mouse_entered"]
+[connection signal="pressed" from="Quit2" to="." method="_on_quit_2_pressed"]

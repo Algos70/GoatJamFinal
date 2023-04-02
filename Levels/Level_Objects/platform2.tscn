@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://46tt8ppv2c0m"]
+
+[ext_resource type="Texture2D" uid="uid://b3nxacijp4hl" path="res://Assets/Zemin Kanlı.png" id="1_8kb6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8qhs"]
+size = Vector2(442.63, 157.471)
+
+[node name="Platform" type="Node2D"]
+position = Vector2(196, 386)
+scale = Vector2(0.658644, 0.522409)
+
+[node name="platform" type="Sprite2D" parent="."]
+position = Vector2(655.893, 302.445)
+texture = ExtResource("1_8kb6p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform/StaticBody2D"]
+position = Vector2(7.59131, 21.0563)
+scale = Vector2(0.888399, 0.559173)
+shape = SubResource("RectangleShape2D_t8qhs")

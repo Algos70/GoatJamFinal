@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://b64mkunpvilgy"]
+
+[sub_resource type="GDScript" id="GDScript_7owa8"]
+script/source = "extends CanvasLayer
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()
+
+
+func _on_play_button_pressed():
+	get_tree().change_scene_to_file(\"res://Levels/game_level.tscn\")
+"
+
+[node name="GameOverScreen" type="CanvasLayer"]
+process_mode = 3
+script = SubResource("GDScript_7owa8")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Rows" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 250
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 86
+text = "WELCOME!!"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlayButton" type="Button" parent="Panel/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "  QUIT  "
+
+[connection signal="pressed" from="Panel/MarginContainer/Rows/CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/Rows/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

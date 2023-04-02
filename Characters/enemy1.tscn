@@ -1,0 +1,164 @@
+[gd_scene load_steps=22 format=3 uid="uid://bp035upb44qsh"]
+
+[ext_resource type="Script" path="res://Characters/enemy1.gd" id="1_hs7nn"]
+[ext_resource type="PackedScene" uid="uid://cn0qvo0p6hqxd" path="res://Utility/hurt_box.tscn" id="3_e3ptd"]
+[ext_resource type="PackedScene" uid="uid://b6oe3vsvvfjsu" path="res://Utility/hit_box.tscn" id="4_lr23b"]
+[ext_resource type="PackedScene" uid="uid://b5qfni5xo3o8o" path="res://Utility/attack_range.tscn" id="6_075mc"]
+[ext_resource type="Texture2D" uid="uid://doday1mp6sida" path="res://Assets/Gokhan_Assets/svgtopng_3/Düşman Saldırı.png" id="6_yv8nl"]
+[ext_resource type="Texture2D" uid="uid://dge5r4x8gof7b" path="res://Assets/Gokhan_Assets/svgtopng_3/Düşman Savunma .png" id="7_yikf2"]
+[ext_resource type="Texture2D" uid="uid://dl1gy24spk5x2" path="res://Assets/Gokhan_Assets/svgtopng_3/Düşman Normal.png" id="8_o23jr"]
+[ext_resource type="Texture2D" uid="uid://tw16ap62u3p6" path="res://Assets/Gokhan_Assets/svgtopng_3/Düşman Normal Hareket.png" id="9_cl1dx"]
+[ext_resource type="Texture2D" uid="uid://cupuo31rpfsnp" path="res://Assets/bigger-blood-effect.png" id="9_wkwaj"]
+[ext_resource type="Animation" uid="uid://s5k3lryxyctc" path="res://Hit.res" id="10_c4bbw"]
+[ext_resource type="PackedScene" uid="uid://b6fskwdvwwgm4" path="res://Utility/health_bar.tscn" id="11_2n7i7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d7hv0"]
+radius = 16.0489
+height = 90.4078
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5radb"]
+size = Vector2(67, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmuwa"]
+size = Vector2(70, 76.75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nce84"]
+atlas = ExtResource("6_yv8nl")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyer8"]
+atlas = ExtResource("7_yikf2")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ld62"]
+atlas = ExtResource("8_o23jr")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swsjt"]
+atlas = ExtResource("9_cl1dx")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4n7l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nce84")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyer8")
+}],
+"loop": true,
+"name": &"defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ld62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swsjt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xbwu5"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gul0m"]
+_data = {
+"Hit": ExtResource("10_c4bbw")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_hs7nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, -9.99999)
+scale = Vector2(0.872332, 0.907001)
+shape = SubResource("CapsuleShape2D_d7hv0")
+
+[node name="HurtBox" parent="." instance=ExtResource("3_e3ptd")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(1.5, -6)
+shape = SubResource("RectangleShape2D_5radb")
+
+[node name="DisableTimer" parent="HurtBox" index="1"]
+wait_time = 0.2
+one_shot = false
+autostart = true
+
+[node name="HitBox" parent="." instance=ExtResource("4_lr23b")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(1, -4.625)
+shape = SubResource("RectangleShape2D_gmuwa")
+
+[node name="DisableHitBoxTimer" parent="HitBox" index="1"]
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="detectionRange" parent="." instance=ExtResource("6_075mc")]
+position = Vector2(0, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.62939e-06, -0.999992)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_a4n7l")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(2, -21)
+scale = Vector2(0.1, 0.1)
+emitting = false
+amount = 20
+sub_emitter = NodePath(".")
+process_material = SubResource("ParticleProcessMaterial_xbwu5")
+texture = ExtResource("9_wkwaj")
+lifetime = 0.2
+one_shot = true
+explosiveness = 0.7
+visibility_rect = Rect2(0, 0, 20, 20)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gul0m")
+}
+
+[node name="HealthBar" parent="." instance=ExtResource("11_2n7i7")]
+offset_left = -75.0
+offset_top = -126.0
+offset_right = -75.0
+offset_bottom = -126.0
+scale = Vector2(0.0973742, 0.13425)
+
+[node name="ProgressBar" parent="HealthBar" index="0"]
+offset_left = 267.011
+offset_top = 506.518
+offset_right = 1305.01
+offset_bottom = 588.518
+
+[connection signal="freeMem" from="." to="HurtBox" method="_on_character_body_2d_free_mem"]
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+[connection signal="body_entered" from="detectionRange" to="." method="_on_detection_range_body_entered"]
+[connection signal="body_exited" from="detectionRange" to="." method="_on_detection_range_body_exited"]
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
+[editable path="HealthBar"]

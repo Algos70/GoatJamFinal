@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn16t1cu3hhxg"]
+
+[ext_resource type="Texture2D" uid="uid://c7o6orjsdh5s7" path="res://Assets/Zemin Yosun.png" id="1_oj5qm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8qhs"]
+size = Vector2(442.63, 157.471)
+
+[node name="Platform" type="Node2D"]
+position = Vector2(196, 386)
+scale = Vector2(0.658644, 0.522409)
+
+[node name="platform" type="Sprite2D" parent="."]
+position = Vector2(659, 347)
+texture = ExtResource("1_oj5qm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform/StaticBody2D"]
+position = Vector2(-6.14349, -46.4692)
+scale = Vector2(0.888399, 0.559173)
+shape = SubResource("RectangleShape2D_t8qhs")

@@ -1,0 +1,123 @@
+[gd_scene load_steps=16 format=3 uid="uid://behoiak0efutg"]
+
+[ext_resource type="Script" path="res://Characters/player_slave.gd" id="1_d1bu4"]
+[ext_resource type="PackedScene" uid="uid://cn0qvo0p6hqxd" path="res://Utility/hurt_box.tscn" id="3_4h1ng"]
+[ext_resource type="PackedScene" uid="uid://b6oe3vsvvfjsu" path="res://Utility/hit_box.tscn" id="4_wp354"]
+[ext_resource type="Texture2D" uid="uid://ctvy52qwimep0" path="res://Assets/Gokhan_Assets/svgtopng/Karakter Kılıç Attack.png" id="5_qm8wn"]
+[ext_resource type="Texture2D" uid="uid://bv0o0iixdu8ar" path="res://Assets/Gokhan_Assets/svgtopng/Karakter Kılıçlı.png" id="6_khn15"]
+[ext_resource type="Texture2D" uid="uid://uk6rxsvl5nh2" path="res://Assets/Gokhan_Assets/svgtopng/Karakter Silah Hareket.png" id="7_7esuc"]
+[ext_resource type="PackedScene" uid="uid://b6fskwdvwwgm4" path="res://Utility/health_bar.tscn" id="7_cp0ia"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32soa"]
+radius = 15.0
+height = 80.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5ty2"]
+size = Vector2(19, 57.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs1e7"]
+size = Vector2(54, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2mqr"]
+atlas = ExtResource("5_qm8wn")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hr28"]
+atlas = ExtResource("6_khn15")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmnnr"]
+atlas = ExtResource("6_khn15")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5p0d"]
+atlas = ExtResource("7_7esuc")
+region = Rect2(0, 0, 744, 1052)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkebd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2mqr")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hr28")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmnnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5p0d")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="PlayerSlave" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_d1bu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, -1)
+shape = SubResource("CapsuleShape2D_32soa")
+
+[node name="HurtBox" parent="." instance=ExtResource("3_4h1ng")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(-12.5, 0.75)
+shape = SubResource("RectangleShape2D_l5ty2")
+
+[node name="DisableTimer" parent="HurtBox" index="1"]
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="HitBox" parent="." instance=ExtResource("4_wp354")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(15, -8)
+shape = SubResource("RectangleShape2D_bs1e7")
+
+[node name="DisableHitBoxTimer" parent="HitBox" index="1"]
+one_shot = false
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.1, 0.103422)
+sprite_frames = SubResource("SpriteFrames_dkebd")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="HealthBar" parent="." instance=ExtResource("7_cp0ia")]
+offset_left = -75.0
+offset_top = -126.0
+offset_right = -75.0
+offset_bottom = -126.0
+scale = Vector2(0.0973742, 0.13425)
+
+[node name="ProgressBar" parent="HealthBar" index="0"]
+offset_left = 154.0
+offset_top = 521.0
+offset_right = 1192.0
+offset_bottom = 603.0
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
+[editable path="HealthBar"]
