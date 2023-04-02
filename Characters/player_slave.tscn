@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://behoiak0efutg"]
+[gd_scene load_steps=25 format=3 uid="uid://behoiak0efutg"]
 
 [ext_resource type="Script" path="res://Characters/player_slave.gd" id="1_d1bu4"]
 [ext_resource type="PackedScene" uid="uid://cn0qvo0p6hqxd" path="res://Utility/hurt_box.tscn" id="3_4h1ng"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://uk6rxsvl5nh2" path="res://Assets/Gokhan_Assets/svgtopng/Karakter Silah Hareket.png" id="7_7esuc"]
 [ext_resource type="PackedScene" uid="uid://b6fskwdvwwgm4" path="res://Utility/health_bar.tscn" id="7_cp0ia"]
 [ext_resource type="Texture2D" uid="uid://cupuo31rpfsnp" path="res://Assets/bigger-blood-effect.png" id="8_dom2m"]
+[ext_resource type="AudioStream" uid="uid://dmvcu43hw8m8j" path="res://Sound/Effects/HitAndDieEffects/SwordSplash.mp3" id="9_1qgv7"]
+[ext_resource type="AudioStream" uid="uid://cci5kvwogwbus" path="res://Sound/Effects/HitAndDieEffects/PlayerTookDmg.mp3" id="10_hkv8i"]
+[ext_resource type="AudioStream" uid="uid://b4q6k85vhcrqy" path="res://Sound/Effects/HitAndDieEffects/PlayerDie.mp3" id="11_ae5jh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32soa"]
 radius = 15.0
@@ -93,33 +96,6 @@ tracks/1/keys = {
 "values": [0.0, 0.122173, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_i352n"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GPUParticles2D:emitting")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="Animation" id="Animation_uibvd"]
 resource_name = "HitFaceRight"
 length = 0.5
@@ -146,6 +122,33 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, -0.122173, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_i352n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkuvi"]
@@ -228,6 +231,15 @@ texture = ExtResource("8_dom2m")
 lifetime = 0.2
 one_shot = true
 explosiveness = 0.71
+
+[node name="SwordSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_1qgv7")
+
+[node name="PlayerHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_hkv8i")
+
+[node name="PlayerDie" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ae5jh")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 

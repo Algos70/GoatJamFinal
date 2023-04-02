@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bp035upb44qsh"]
+[gd_scene load_steps=26 format=3 uid="uid://bp035upb44qsh"]
 
 [ext_resource type="Script" path="res://Characters/enemy1.gd" id="1_hs7nn"]
 [ext_resource type="PackedScene" uid="uid://cn0qvo0p6hqxd" path="res://Utility/hurt_box.tscn" id="3_e3ptd"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cupuo31rpfsnp" path="res://Assets/bigger-blood-effect.png" id="9_wkwaj"]
 [ext_resource type="Animation" uid="uid://s5k3lryxyctc" path="res://Hit.res" id="10_c4bbw"]
 [ext_resource type="PackedScene" uid="uid://b6fskwdvwwgm4" path="res://Utility/health_bar.tscn" id="11_2n7i7"]
+[ext_resource type="AudioStream" uid="uid://b8gylqo8mt0s6" path="res://Sound/Effects/HitAndDieEffects/EnemyDie.mp3" id="12_fftlw"]
+[ext_resource type="AudioStream" uid="uid://byiy2ej7dn7gb" path="res://Sound/Effects/HitAndDieEffects/EnemyHit.mp3" id="13_qc1dh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d7hv0"]
 radius = 16.0489
@@ -211,10 +213,17 @@ offset_top = 506.518
 offset_right = 1305.01
 offset_bottom = 588.518
 
+[node name="Die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_fftlw")
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_qc1dh")
+
 [connection signal="freeMem" from="." to="HurtBox" method="_on_character_body_2d_free_mem"]
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="body_entered" from="detectionRange" to="." method="_on_detection_range_body_entered"]
 [connection signal="body_exited" from="detectionRange" to="." method="_on_detection_range_body_exited"]
+[connection signal="finished" from="Die" to="." method="_on_die_finished"]
 
 [editable path="HurtBox"]
 [editable path="HitBox"]

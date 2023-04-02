@@ -16,6 +16,7 @@ var landed = false
 var isOnEdge = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var rng = RandomNumberGenerator.new()
+var dieSoundPlayed = false
 signal freeMem
 
 
@@ -25,6 +26,8 @@ signal freeMem
 @onready var animatedSprite: AnimatedSprite2D = $"AnimatedSprite2D" 
 @onready var hpBar = $HealthBar/ProgressBar
 @onready var animationPlayer = $"AnimationPlayer"
+@onready var dieSound = $"Die"
+@onready var hitSound = $"Hit"
 
 func _ready():
 	hpBar.max_value = hp
@@ -92,9 +95,12 @@ func _on_hurt_box_hurt(damage):
 				animationPlayer.play("HitFaceRight")
 			hpBar.value -= damage
 			hp -= damage
-	if hp <= 0:
-		emit_signal("freeMem") #hp 0 or lower delete the enemy from the game
-			
+		if hp <= 0:
+			if (not dieSoundPlayed):
+				dieSound.play(0)
+				dieSoundPlayed = true
+		else:
+			hitSound.play(0)			
 	move_and_slide()
 
 
@@ -116,4 +122,9 @@ func attack():
 func idle():
 	update_animation("idle")
 	
+	
+
+
+func _on_die_finished():
+	emit_signal("freeMem") #hp 0 or lower delete the enemy from the game
 	

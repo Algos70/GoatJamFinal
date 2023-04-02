@@ -1,11 +1,11 @@
 2a60927148abd1d33b818b535e306557
-::res://::1680438308
-Hit.res::Animation::1325988295404036736::1680438283::0::1::::<><>::
+::res://::1680438817
+Hit.res::Animation::1325988295404036736::1680438817::0::1::::<><>::
 HurtBox.gd::GDScript::-1::1680438283::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::6418745344737241572::1680438283::1680438309::1::::<><>::
 README.md::TextFile::-1::1680438283::0::1::::<><>::
 WelcomeScreen.gd::GDScript::-1::1680438283::0::1::::<>Node2D<>::
-::res://Assets/::1680438283
+::res://Assets/::1680438309
 04B_30__.TTF::FontFile::3139394333253208901::1680438283::1680438309::1::::<><>::
 345152.jpg::CompressedTexture2D::5538473849385350586::1680438283::1680438309::1::::<><>::
 arenaResim.jpg::CompressedTexture2D::235055753207773694::1680438283::1680438309::1::::<><>::
@@ -29,7 +29,7 @@ Zemin Kanlı.png::CompressedTexture2D::128821818383225333::1680438283::168043830
 Zemin Temiz.png::CompressedTexture2D::1652074121353720882::1680438283::1680438309::1::::<><>::
 Zemin Yosun.png::CompressedTexture2D::7049693787872853476::1680438283::1680438309::1::::<><>::
 ::res://Assets/Gokhan_Assets/::1680438283
-::res://Assets/Gokhan_Assets/svgtopng/::1680438283
+::res://Assets/Gokhan_Assets/svgtopng/::1680438309
 Düşman Normal Hareket.png::CompressedTexture2D::2791609947840072363::1680438283::1680438309::1::::<><>::
 Düşman Normal.png::CompressedTexture2D::5121884089245632859::1680438283::1680438309::1::::<><>::
 Düşman Saldırı.png::CompressedTexture2D::7707948004639623893::1680438283::1680438309::1::::<><>::
@@ -46,35 +46,35 @@ Platform.png::CompressedTexture2D::6854910556604156708::1680438283::1680438309::
 Zemin Kanlı.png::CompressedTexture2D::2558382296961552758::1680438283::1680438309::1::::<><>::
 Zemin Temiz.png::CompressedTexture2D::7180019831930556043::1680438283::1680438309::1::::<><>::
 Zemin Yosun.png::CompressedTexture2D::6025615782387781758::1680438283::1680438309::1::::<><>::
-::res://Assets/Gokhan_Assets/svgtopng_1/::1680438283
+::res://Assets/Gokhan_Assets/svgtopng_1/::1680438309
 Background.png::CompressedTexture2D::4534261467606596275::1680438283::1680438309::1::::<><>::
-::res://Assets/Gokhan_Assets/svgtopng_2/::1680438283
+::res://Assets/Gokhan_Assets/svgtopng_2/::1680438309
 Backgorund giriş.png::CompressedTexture2D::96172115430165928::1680438283::1680438309::1::::<><>::
 Backgorund çıkış.png::CompressedTexture2D::3017175055633448035::1680438283::1680438309::1::::<><>::
 Background.png::CompressedTexture2D::8528717707930776534::1680438283::1680438309::1::::<><>::
-::res://Assets/Gokhan_Assets/svgtopng_3/::1680438283
+::res://Assets/Gokhan_Assets/svgtopng_3/::1680438309
 Düşman Normal Hareket.png::CompressedTexture2D::1380638365752374653::1680438283::1680438309::1::::<><>::
 Düşman Normal.png::CompressedTexture2D::7985421777481623009::1680438283::1680438309::1::::<><>::
 Düşman Saldırı.png::CompressedTexture2D::8148143239196084710::1680438283::1680438309::1::::<><>::
 Düşman Savunma .png::CompressedTexture2D::7590506052418713605::1680438283::1680438309::1::::<><>::
-::res://Assets/Gokhan_Assets/svgtopng_4/::1680438283
+::res://Assets/Gokhan_Assets/svgtopng_4/::1680438309
 Backgorund temiz.png::CompressedTexture2D::1163310980121954543::1680438283::1680438309::1::::<><>::
 Background Kanlı.png::CompressedTexture2D::8964980641063349641::1680438283::1680438309::1::::<><>::
 Portal.png::CompressedTexture2D::1219561548128788553::1680438283::1680438309::1::::<><>::
-::res://Characters/::1680438283
-enemy1.gd::GDScript::-1::1680438283::0::1::::<>CharacterBody2D<>::
-enemy1.tscn::PackedScene::3492617505454106307::1680438283::0::1::::<><>::res://Characters/enemy1.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://b5qfni5xo3o8o<>uid://doday1mp6sida<>uid://dge5r4x8gof7b<>uid://dl1gy24spk5x2<>uid://tw16ap62u3p6<>uid://cupuo31rpfsnp<>uid://s5k3lryxyctc<>uid://b6fskwdvwwgm4
+::res://Characters/::1680441192
+enemy1.gd::GDScript::-1::1680441188::0::1::::<>CharacterBody2D<>::
+enemy1.tscn::PackedScene::3492617505454106307::1680441192::0::1::::<><>::res://Characters/enemy1.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://b5qfni5xo3o8o<>uid://doday1mp6sida<>uid://dge5r4x8gof7b<>uid://dl1gy24spk5x2<>uid://tw16ap62u3p6<>uid://cupuo31rpfsnp<>uid://s5k3lryxyctc<>uid://b6fskwdvwwgm4<>uid://dy53sgkfv4cvi<>uid://byiy2ej7dn7gb
 enemy3.gd::GDScript::-1::1680438283::0::1::::<>CharacterBody2D<>::
 enemy3.tscn::PackedScene::8310075081512770545::1680438283::0::1::::<><>::res://enemy.gd<>uid://duqxe3qr0dn7p<>uid://b52s8cbffyyln<>uid://b5qfni5xo3o8o
 HurtBox.gd::GDScript::-1::1680438283::0::1::::<>Area2D<>::
-player_slave.gd::GDScript::-1::1680438283::0::1::::<>CharacterBody2D<>::
-player_slave.tscn::PackedScene::2682491043363114084::1680438283::0::1::::<><>::res://Characters/player_slave.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://ctvy52qwimep0<>uid://bv0o0iixdu8ar<>uid://uk6rxsvl5nh2<>uid://b6fskwdvwwgm4
-::res://Levels/::1680438283
+player_slave.gd::GDScript::-1::1680440873::0::1::::<>CharacterBody2D<>::
+player_slave.tscn::PackedScene::2682491043363114084::1680441192::0::1::::<><>::res://Characters/player_slave.gd<>uid://cn0qvo0p6hqxd<>uid://b6oe3vsvvfjsu<>uid://ctvy52qwimep0<>uid://bv0o0iixdu8ar<>uid://uk6rxsvl5nh2<>uid://b6fskwdvwwgm4<>uid://cupuo31rpfsnp<>uid://dmvcu43hw8m8j<>uid://cci5kvwogwbus<>uid://b4q6k85vhcrqy
+::res://Levels/::1680438330
 arena_2.gd::GDScript::-1::1680438283::0::1::::<>Node2D<>::
 arena_2.tscn::PackedScene::143706829839924865::1680438283::0::1::::<><>::uid://bmt68o5gxaj5<>res://Levels/arena_2.gd<>uid://bi8sox2e4jy2v<>uid://behoiak0efutg<>uid://doxf34jut7axf<>uid://nrk846c0foij
 game_level.gd::GDScript::-1::1680438283::0::1::::<>Node2D<>::
 game_level.tscn::PackedScene::9112275430691491352::1680438283::0::1::::<><>::uid://behoiak0efutg<>res://Levels/game_level.gd<>uid://doxf34jut7axf<>uid://xsjoi3nshqle<>uid://bp035upb44qsh<>uid://eyoeo16wnl4p
-welcome_screen.tscn::PackedScene::1739746805008201242::1680438283::0::1::::<><>::res://WelcomeScreen.gd
+welcome_screen.tscn::PackedScene::1739746805008201242::1680438330::0::1::::<><>::res://WelcomeScreen.gd
 ::res://Levels/Level_Objects/::1680438283
 heal.gd::GDScript::-1::1680438283::0::1::::<>Node2D<>::
 heal.tscn::PackedScene::7235506552629445070::1680438283::0::1::::<><>::res://Levels/Level_Objects/heal.gd<>uid://iyotgdyj1gwo
@@ -89,10 +89,18 @@ spikes.tscn::PackedScene::6254549212089543320::1680438283::0::1::::<><>::res://L
 spikes_2.gd::GDScript::-1::1680438283::0::1::::<>Node2D<>::
 spikes_2.tscn::PackedScene::331158398654153277::1680438283::0::1::::<><>::uid://dkp5ljxediq63<>res://Levels/Level_Objects/spikes_2.gd
 ::res://Sound/::1680438283
-::res://Sound/Effects/::1680438283
+::res://Sound/Effects/::1680439858
 Click.wav::AudioStreamWAV::5294034049658655460::1680438283::1680438309::1::::<><>::
 pressed.mp3::AudioStreamMP3::3229596860075085802::1680438283::1680438309::1::::<><>::
-::res://Sound/Music/::1680438283
+::res://Sound/Effects/HitAndDieEffects/::1680441345
+EnemyDie.mp3::AudioStreamMP3::4716516505348922847::1680441322::1680441350::1::::<><>::
+EnemyHit.mp3::AudioStreamMP3::4088973602755314853::1680440400::1680440652::1::::<><>::
+MainTheme.mp3::AudioStreamMP3::3567249201861504367::1680439793::1680440652::1::::<><>::
+PassedLevel.mp3::AudioStreamMP3::7606276302573238667::1680439787::1680440652::1::::<><>::
+PlayerDie.mp3::AudioStreamMP3::4456829058554090268::1680439799::1680440652::1::::<><>::
+PlayerTookDmg.mp3::AudioStreamMP3::4931574582037818638::1680439805::1680440652::1::::<><>::
+SwordSplash.mp3::AudioStreamMP3::8045038824215015139::1680439811::1680440652::1::::<><>::
+::res://Sound/Music/::1680438309
 FonMusic.wav::AudioStreamWAV::455166370734321708::1680438283::1680438309::1::::<><>::
 ::res://src/::1680438283
 HitBox.gd::GDScript::-1::1680438283::0::1::::my_hitBox<>Area2D<>::
