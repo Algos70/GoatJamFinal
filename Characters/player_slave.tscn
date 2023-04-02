@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cupuo31rpfsnp" path="res://Assets/bigger-blood-effect.png" id="8_dom2m"]
 [ext_resource type="AudioStream" uid="uid://dmvcu43hw8m8j" path="res://Sound/Effects/HitAndDieEffects/SwordSplash.mp3" id="9_1qgv7"]
 [ext_resource type="AudioStream" uid="uid://cci5kvwogwbus" path="res://Sound/Effects/HitAndDieEffects/PlayerTookDmg.mp3" id="10_hkv8i"]
-[ext_resource type="AudioStream" uid="uid://b4q6k85vhcrqy" path="res://Sound/Effects/HitAndDieEffects/PlayerDie.mp3" id="11_ae5jh"]
+[ext_resource type="AudioStream" uid="uid://byumwpp717xkd" path="res://Sound/Effects/HitAndDieEffects/PlayerDie.mp3" id="11_ae5jh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32soa"]
 radius = 15.0
@@ -242,6 +242,7 @@ stream = ExtResource("10_hkv8i")
 stream = ExtResource("11_ae5jh")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+[connection signal="finished" from="PlayerDie" to="." method="_on_player_die_finished"]
 
 [editable path="HurtBox"]
 [editable path="HitBox"]

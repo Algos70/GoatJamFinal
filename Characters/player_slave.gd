@@ -17,7 +17,6 @@ var isFacingLeft = false
 @onready var playerDie = $"PlayerDie"
 @onready var swordSound = $SwordSound
 
-
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -76,10 +75,10 @@ func _on_hurt_box_hurt(damage):
 		animationPlayer.play("HitFaceLeft")
 	else:
 		animationPlayer.play("HitFaceRight")
-	playerTookDmg.play(0)
 	if hp <= 0:
 		playerDie.play()
-		get_tree().change_scene_to_file("res://UI/game_over_page.tscn")
+	else:
+		playerTookDmg.play(0)
 	print(hp)
 
 func startAttack():
@@ -89,3 +88,7 @@ func startAttack():
 	swordSound.play(0)
 func endAttack():
 	sprite.play("run")
+
+
+func _on_player_die_finished():
+	get_tree().change_scene_to_file("res://UI/game_over_page.tscn")

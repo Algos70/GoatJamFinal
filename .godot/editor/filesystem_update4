@@ -1,6 +1,3 @@
-res://Levels/welcome_screen.tscn
 res://Characters/enemy1.tscn
-res://Hit.res
-res://Characters/enemy1.gd
 res://Characters/player_slave.tscn
 res://Characters/player_slave.gd
