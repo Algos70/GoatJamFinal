@@ -44,6 +44,7 @@ theme_override_font_sizes/font_size = 50
 text = "Negro: Neredeyim ben? Burası neresi? Kimim ben?"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 177.0
 offset_top = 310.0
 offset_right = 1946.0
@@ -56,6 +57,7 @@ text = "Altın zırlı adam: Gladyatörlerim. Buradan sağ çıkmak için
  Savaşlar başlasın!"
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 163.0
 offset_top = 650.0
 offset_right = 1789.0

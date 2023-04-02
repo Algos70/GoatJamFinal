@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+=======
+res://Characters/player_slave.tscn
+res://Characters/enemy1.tscn
+res://UI/game_over_page.tscn
+res://Levels/arena_3.tscn
+res://Levels/game_level.tscn
+res://Levels/arena_3.gd
+res://Levels/arena_2.tscn
+res://Levels/arena_4.tscn
+res://Levels/arena_4.gd
+res://UI/welcome_page.tscn
+res://UI/welcome_page.gd
+>>>>>>> ff57f1d (Level design done)
 res://Levels/welcome_screen.tscn
 res://Characters/king.tscn
 res://Levels/act_1.gd
+<<<<<<< HEAD
 res://src/HitBox.gd
 res://King.gd
 res://Utility/hit_box.tscn
@@ -9,3 +24,15 @@ res://Characters/enemy1.tscn
 res://Levels/BossDeneme.tscn
 res://Levels/boss_deneme.tscn
 res://Levels/game_level.tscn
+=======
+res://Levels/Level_Objects/portal.gd
+res://Levels/Level_Objects/portal2.gd
+res://UI/next_level.gd
+res://UI/next_level_page.tscn
+res://UI/next_level_page 2.tscn
+res://UI/next_level_page 2.gd
+res://UI/game_over_page.gd
+res://Levels/Level_Objects/spikes_2.gd
+res://Levels/Level_Objects/platform_air.tscn
+res://Utility/attack_range.tscn
+>>>>>>> ff57f1d (Level design done)

@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cupuo31rpfsnp" path="res://Assets/bigger-blood-effect.png" id="8_dom2m"]
 [ext_resource type="AudioStream" uid="uid://dmvcu43hw8m8j" path="res://Sound/Effects/HitAndDieEffects/SwordSplash.mp3" id="9_1qgv7"]
 [ext_resource type="AudioStream" uid="uid://cci5kvwogwbus" path="res://Sound/Effects/HitAndDieEffects/PlayerTookDmg.mp3" id="10_hkv8i"]
-[ext_resource type="AudioStream" uid="uid://byumwpp717xkd" path="res://Sound/Effects/HitAndDieEffects/PlayerDie.mp3" id="11_ae5jh"]
+[ext_resource type="AudioStream" uid="uid://b4q6k85vhcrqy" path="res://Sound/Effects/HitAndDieEffects/PlayerDie.mp3" id="11_ae5jh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32soa"]
 radius = 15.0
@@ -20,7 +20,7 @@ height = 80.0
 size = Vector2(19, 57.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bs1e7"]
-size = Vector2(54, 28)
+size = Vector2(55, 69)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n2mqr"]
 atlas = ExtResource("5_qm8wn")
@@ -189,7 +189,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(15, -8)
+position = Vector2(15.5, -6.5)
 shape = SubResource("RectangleShape2D_bs1e7")
 
 [node name="DisableHitBoxTimer" parent="HitBox" index="1"]
@@ -242,7 +242,6 @@ stream = ExtResource("10_hkv8i")
 stream = ExtResource("11_ae5jh")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
-[connection signal="finished" from="PlayerDie" to="." method="_on_player_die_finished"]
 
 [editable path="HurtBox"]
 [editable path="HitBox"]
