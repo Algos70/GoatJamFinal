@@ -94,3 +94,4 @@ func endAttack():
 
 func _on_player_die_finished():
 	get_tree().change_scene_to_file("res://UI/game_over_page.tscn")
+	

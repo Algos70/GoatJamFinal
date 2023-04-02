@@ -12,6 +12,7 @@ signal hurt(damage)
 func _on_area_entered(area):
 	if area.is_in_group("attack"):
 		if not area.get("damage") == null:
+			var hitBox = area.name
 			attacking_body = area.get_parent().name
 			if attacking_body == "CharacterBody2D":
 				get_tree().call_group("enemy", "attack")

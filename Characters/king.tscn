@@ -49,8 +49,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" instance=ExtResource("1_dhno2")]
+[node name="CharacterBody2D" groups=["boss"] instance=ExtResource("1_dhno2")]
 script = ExtResource("1_nsjt8")
+hp = 10
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(6, -12)

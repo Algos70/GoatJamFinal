@@ -11,3 +11,7 @@ res://Levels/boss_deneme.tscn
 res://Levels/game_level.tscn
 res://Characters/player_slave.tscn
 res://UI/game_over_page.tscn
+res://Utility/magic_ball.tscn
+res://Utility/hit_box.gd
+res://HurtBox.gd
+res://Characters/player_slave.gd

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var hp = 5
+
+@export var hp = 10
 const IDLE_SPEED = 50
 const CHASE_SPEED = 100
 
@@ -17,6 +18,9 @@ var isOnEdge = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var rng = RandomNumberGenerator.new()
 var dieSoundPlayed = false
+var previousState = null
+
+
 signal freeMem
 
 
@@ -49,7 +53,6 @@ func _process(delta):
 				isOnEdge = true
 	else:
 		landed = true
-	# handle idle state
 	if state == "idle":
 		if (isOnEdge and turnBackTimer <= 0):
 			velocity.x *= -1
