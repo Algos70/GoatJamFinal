@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cd1p307fsmex8"]
+[gd_scene load_steps=9 format=3 uid="uid://cd1p307fsmex8"]
 
 [ext_resource type="Script" path="res://UI/next_level.gd" id="1_a0ve5"]
+[ext_resource type="AudioStream" uid="uid://dgmsi247jgiv8" path="res://Sound/Effects/HitAndDieEffects/PassedLevel.mp3" id="2_kwkc6"]
 [ext_resource type="Texture2D" uid="uid://ewt54tyt641u" path="res://Assets/fist.png" id="2_r3wso"]
 [ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="3_1njj7"]
 [ext_resource type="Script" path="res://UI/Play.gd" id="4_4shrs"]
@@ -16,6 +17,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a0ve5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kwkc6")
+autoplay = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
