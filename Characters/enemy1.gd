@@ -24,6 +24,7 @@ signal freeMem
 @onready var player = get_parent().get_node("PlayerSlave") 
 @onready var animatedSprite: AnimatedSprite2D = $"AnimatedSprite2D" 
 @onready var hpBar = $HealthBar/ProgressBar
+@onready var animationPlayer = $"AnimationPlayer"
 
 func _ready():
 	hpBar.max_value = hp
@@ -85,6 +86,10 @@ func _on_hurt_box_hurt(damage):
 		get_tree().call_group("player", "startAttack")
 		var protected = on_player_attack()
 		if (not protected):
+			if isFacingLeft:
+				animationPlayer.play("HitFaceLeft")
+			else:
+				animationPlayer.play("HitFaceRight")
 			hpBar.value -= damage
 			hp -= damage
 	if hp <= 0:

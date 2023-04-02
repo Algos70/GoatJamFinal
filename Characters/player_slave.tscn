@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://behoiak0efutg"]
+[gd_scene load_steps=22 format=3 uid="uid://behoiak0efutg"]
 
 [ext_resource type="Script" path="res://Characters/player_slave.gd" id="1_d1bu4"]
 [ext_resource type="PackedScene" uid="uid://cn0qvo0p6hqxd" path="res://Utility/hurt_box.tscn" id="3_4h1ng"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bv0o0iixdu8ar" path="res://Assets/Gokhan_Assets/svgtopng/Karakter Kılıçlı.png" id="6_khn15"]
 [ext_resource type="Texture2D" uid="uid://uk6rxsvl5nh2" path="res://Assets/Gokhan_Assets/svgtopng/Karakter Silah Hareket.png" id="7_7esuc"]
 [ext_resource type="PackedScene" uid="uid://b6fskwdvwwgm4" path="res://Utility/health_bar.tscn" id="7_cp0ia"]
+[ext_resource type="Texture2D" uid="uid://cupuo31rpfsnp" path="res://Assets/bigger-blood-effect.png" id="8_dom2m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32soa"]
 radius = 15.0
@@ -64,6 +65,102 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_psetk"]
+resource_name = "HitFaceLeft"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.122173, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_i352n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_uibvd"]
+resource_name = "HitFaceRight"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.122173, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tkuvi"]
+_data = {
+"HitFaceLeft": SubResource("Animation_psetk"),
+"HitFaceRight": SubResource("Animation_uibvd"),
+"RESET": SubResource("Animation_i352n")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y7xwu"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
 [node name="PlayerSlave" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_d1bu4")
 
@@ -115,6 +212,22 @@ offset_left = 154.0
 offset_top = 521.0
 offset_right = 1192.0
 offset_bottom = 603.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tkuvi")
+}
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-13, -12)
+emitting = false
+amount = 20
+sub_emitter = NodePath(".")
+process_material = SubResource("ParticleProcessMaterial_y7xwu")
+texture = ExtResource("8_dom2m")
+lifetime = 0.2
+one_shot = true
+explosiveness = 0.71
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bp035upb44qsh"]
+[gd_scene load_steps=24 format=3 uid="uid://bp035upb44qsh"]
 
 [ext_resource type="Script" path="res://Characters/enemy1.gd" id="1_hs7nn"]
 [ext_resource type="PackedScene" uid="uid://cn0qvo0p6hqxd" path="res://Utility/hurt_box.tscn" id="3_e3ptd"]
@@ -74,9 +74,66 @@ gravity = Vector3(0, 98, 0)
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 
+[sub_resource type="Animation" id="Animation_2dpmc"]
+resource_name = "HitFaceLeft"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.122173, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_b85ak"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gul0m"]
 _data = {
-"Hit": ExtResource("10_c4bbw")
+"HitFaceLeft": SubResource("Animation_2dpmc"),
+"HitFaceRight": ExtResource("10_c4bbw"),
+"RESET": SubResource("Animation_b85ak")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
