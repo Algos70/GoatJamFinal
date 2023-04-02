@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://dy5t6epgsqsyf"]
+
+[ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="1_2dln8"]
+[ext_resource type="Script" path="res://Levels/act_2.gd" id="1_bkvi6"]
+[ext_resource type="Texture2D" uid="uid://c51ln0h48orqv" path="res://Assets/Colesium.jpg" id="1_s4iv3"]
+[ext_resource type="AudioStream" uid="uid://chop75h6ww8qq" path="res://Sound/Effects/Click.wav" id="4_gjq3r"]
+[ext_resource type="AudioStream" uid="uid://bmao8uvp34rgs" path="res://Sound/Effects/pressed.mp3" id="5_7vj2d"]
+
+[node name="Act2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bkvi6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(958.5, 541)
+scale = Vector2(3.14216, 3.59333)
+texture = ExtResource("1_s4iv3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 754.0
+offset_top = 48.0
+offset_right = 1041.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2dln8")
+theme_override_font_sizes/font_size = 70
+text = "Act 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 123.0
+offset_top = 185.0
+offset_right = 1749.0
+offset_bottom = 271.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Negro: Aylardır savaşıyorum, onlarca insan katlettim 
+ama hala bu cehennemden çıkmanın yolunu bulamadım.
+Bu arenalar sanki iştahı bitmeyen obur ve bencil bir yaratık gibi
+herkesi yiyor. 
+ Geçen ayların sonunda nerede olduğumu sonunda buldum, burası 
+savaş tanrısının Yikiel'in arenalar diyarı. Duyduklarıma göre tüm bu 
+arenaların bir anlamı var ama kimse ne olduğunu bilmiyor. Daha da 
+ürküncü kimse bunu söyleyenlerin hiçbiri bu bilgiyi nasıl edindiklerini
+bilmiyorlar, bildikleri tek şey bir sabah uyandıkları ve bu söylentinin
+akıllarında olması. "
+
+[node name="Next2" type="Button" parent="."]
+offset_left = 781.0
+offset_top = 897.0
+offset_right = 1108.0
+offset_bottom = 1010.0
+theme_override_font_sizes/font_size = 60
+text = "  Fight  "
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Next2"]
+stream = ExtResource("4_gjq3r")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Next2"]
+stream = ExtResource("5_7vj2d")
+volume_db = -10.0
+
+[connection signal="mouse_entered" from="Next2" to="." method="_on_next_2_mouse_entered"]
+[connection signal="pressed" from="Next2" to="." method="_on_next_2_pressed"]
