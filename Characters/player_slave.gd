@@ -25,6 +25,8 @@ func _ready():
 	hpBar.value = hp
 
 func _physics_process(delta):
+	if Input.is_action_pressed("attack") and velocity.x == 0 and velocity.y == 0:
+		get_tree().call_group("player", "startAttack")
 	if attack_animation_cooldown > 0:
 		attack_animation_cooldown -= delta
 	else:
