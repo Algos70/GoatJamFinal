@@ -15,11 +15,11 @@
 [ext_resource type="AudioStream" uid="uid://byiy2ej7dn7gb" path="res://Sound/Effects/HitAndDieEffects/EnemyHit.mp3" id="13_qc1dh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d7hv0"]
-radius = 16.0489
+radius = 28.6588
 height = 90.4078
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5radb"]
-size = Vector2(67, 76)
+size = Vector2(80, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmuwa"]
 size = Vector2(75.5419, 76.75)

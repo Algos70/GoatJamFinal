@@ -52,6 +52,15 @@ animations = [{
 [node name="CharacterBody2D" instance=ExtResource("1_dhno2")]
 script = ExtResource("1_nsjt8")
 
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(6, -12)
+
+[node name="HurtBox" parent="." index="1"]
+position = Vector2(-42, 95)
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(46, -100)
+
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." index="10"]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_l5dar")
