@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1valg4cb125o"]
+
+[ext_resource type="Texture2D" uid="uid://bekerluxgpqvt" path="res://Assets/Slave.png" id="1_7sb3w"]
+[ext_resource type="Script" path="res://Levels/act_1.gd" id="1_g4hc8"]
+[ext_resource type="FontFile" uid="uid://bky0mpdfsladh" path="res://Assets/04B_30__.TTF" id="2_bptwv"]
+[ext_resource type="AudioStream" uid="uid://chop75h6ww8qq" path="res://Sound/Effects/Click.wav" id="4_71bac"]
+[ext_resource type="AudioStream" uid="uid://bmao8uvp34rgs" path="res://Sound/Effects/pressed.mp3" id="5_1sp4l"]
+
+[node name="Act1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4hc8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(957, 543)
+scale = Vector2(1.875, 1.05664)
+texture = ExtResource("1_7sb3w")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 48.0
+offset_right = 1041.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bptwv")
+theme_override_font_sizes/font_size = 70
+text = "Act 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 180.0
+offset_right = 1667.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.278431, 0.631373, 0.352941, 1)
+theme_override_font_sizes/font_size = 50
+text = "Negro: Neredeyim ben? Burası neresi? Kimim ben?"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 177.0
+offset_top = 310.0
+offset_right = 1946.0
+offset_bottom = 598.0
+theme_override_colors/font_color = Color(0.278431, 0.631373, 0.352941, 1)
+theme_override_font_sizes/font_size = 50
+text = "Altın zırlı adam: Gladyatörlerim. Buradan sağ çıkmak için
+ herkesi öldürüp
+ sona kalan olmalısınız. Sona kalan savaşçı azad olur.
+ Savaşlar başlasın!"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 163.0
+offset_top = 650.0
+offset_right = 1789.0
+offset_bottom = 736.0
+theme_override_colors/font_color = Color(0.278431, 0.631373, 0.352941, 1)
+theme_override_font_sizes/font_size = 50
+text = "*Önümdeki metal kapı açılır ve savaş çığlıkları yankılanmaya başlar"
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 766.0
+offset_right = 1096.0
+offset_bottom = 908.0
+theme_override_font_sizes/font_size = 60
+text = "Next"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Next"]
+stream = ExtResource("4_71bac")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Next"]
+stream = ExtResource("5_1sp4l")
+volume_db = -10.0
+
+[connection signal="mouse_entered" from="Next" to="." method="_on_next_mouse_entered"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

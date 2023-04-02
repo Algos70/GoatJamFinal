@@ -9265,6 +9265,7 @@ layer_0/tile_data = PackedInt32Array(1, 0, 0, 65537, 0, 1, 131073, 0, 2, 196609,
 [node name="Portal" parent="." instance=ExtResource("2_usdru")]
 position = Vector2(3782, 414)
 scale = Vector2(6.33112, 6.59453)
+script = null
 
 [node name="PlayerSlave" parent="." instance=ExtResource("3_ibmkt")]
 position = Vector2(244, 455)

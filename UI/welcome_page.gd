@@ -8,7 +8,7 @@ func _ready():
 
 func _on_play_pressed():
 	pressed.play()
-	get_tree().change_scene_to_file("res://Levels/game_level.tscn")
+	get_tree().change_scene_to_file("res://Levels/act_1.tscn")
 
 
 func _on_quit_pressed():
