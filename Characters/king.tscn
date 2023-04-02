@@ -1,8 +1,61 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnwe8jdx3hbw4"]
+[gd_scene load_steps=9 format=3 uid="uid://q646ickefhma"]
 
-[ext_resource type="PackedScene" uid="uid://bp035upb44qsh" path="res://Characters/enemy1.tscn" id="1_qxsfs"]
+[ext_resource type="PackedScene" uid="uid://bp035upb44qsh" path="res://Characters/enemy1.tscn" id="1_dhno2"]
+[ext_resource type="Script" path="res://Characters/king.gd" id="1_nsjt8"]
+[ext_resource type="Texture2D" uid="uid://ddpfdwdvad2sw" path="res://Assets/Kral/Kral Saldırı.png" id="3_2lngv"]
+[ext_resource type="Texture2D" uid="uid://dbij6ikoctj5h" path="res://Assets/Kral/Kral Speccial Attack.png" id="4_bp0qa"]
+[ext_resource type="Texture2D" uid="uid://bqlqquwejnago" path="res://Assets/Kral/Kral Savunma.png" id="4_ny4x6"]
+[ext_resource type="Texture2D" uid="uid://bwostx7eshyby" path="res://Assets/Kral/Kral Normal.png" id="5_yf5vx"]
+[ext_resource type="Texture2D" uid="uid://byro1jecly4fy" path="res://Assets/Kral/Kral Hareket.png" id="6_ym34j"]
 
-[node name="CharacterBody2D" instance=ExtResource("1_qxsfs")]
+[sub_resource type="SpriteFrames" id="SpriteFrames_l5dar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2lngv")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ny4x6")
+}],
+"loop": true,
+"name": &"defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yf5vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ym34j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yf5vx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bp0qa")
+}],
+"loop": true,
+"name": &"magic",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" instance=ExtResource("1_dhno2")]
+script = ExtResource("1_nsjt8")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." index="10"]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_l5dar")
+animation = &"idle"
 
 [editable path="HurtBox"]
 [editable path="HitBox"]

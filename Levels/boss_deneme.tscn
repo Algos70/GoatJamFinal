@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://7x3jjwkfnvcu"]
+
+[ext_resource type="PackedScene" uid="uid://q646ickefhma" path="res://Characters/king.tscn" id="1_jn2n1"]
+[ext_resource type="PackedScene" uid="uid://46tt8ppv2c0m" path="res://Levels/Level_Objects/platform2.tscn" id="2_4h4la"]
+[ext_resource type="PackedScene" uid="uid://behoiak0efutg" path="res://Characters/player_slave.tscn" id="3_hg267"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_jn2n1")]
+position = Vector2(574, 287)
+
+[node name="Platform" parent="." instance=ExtResource("2_4h4la")]
+position = Vector2(-176, 29)
+scale = Vector2(1.33893, 1.30376)
+
+[node name="PlayerSlave" parent="." instance=ExtResource("3_hg267")]
+position = Vector2(770, 263)
